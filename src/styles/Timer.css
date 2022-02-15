@@ -1,0 +1,48 @@
+:root {
+    --timer-size: 30vh;
+    --line-width: 0.2vh;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timerSVG {
+    position: relative;
+    height: var(--timer-size);
+    width: var(--timer-size);
+    transform: scaleX(-1);
+
+}
+
+.timerCircle {
+    fill: none;
+    stroke: none;
+}
+
+.elapsedPath {
+    stroke-width: var(--line-width);
+    stroke: grey;
+}
+
+/* timer label styles */
+.timeLabel {
+    position: absolute;
+    width: var(--timer-size);
+    height: var(--timer-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+/* remaining path */
+.pathRemaining {
+    stroke-width: var(--line-width);
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+}
